@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Sunrise Scene</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: #87CEEB; /* Light blue sky */
+    }
+
+    #sun {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: #FFD700; /* Yellow */
+      border-radius: 50%;
+      top: calc(50% - 50px);
+      left: calc(50% - 50px);
+      animation: rise 10s linear infinite;
+    }
+
+    @keyframes rise {
+      0% {
+        transform: translateY(100%);
+      }
+      100% {
+        transform: translateY(-100%);
+      }
+    }
+
+    .cloud {
+      position: absolute;
+      width: 200px;
+      height: 100px;
+      background-color: white;
+      border-radius: 50%;
+      opacity: 0.9;
+      animation: moveClouds linear infinite;
+    }
+
+    @keyframes moveClouds {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(200%);
+      }
+    }
+
+    .cloud1 {
+      top: 20%;
+      left: -50%;
+      animation-duration: 25s;
+    }
+
+    .cloud2 {
+      top: 40%;
+      left: -50%;
+      animation-duration: 20s;
+    }
+
+    .cloud3 {
+      top: 10%;
+      left: -50%;
+      animation-duration: 18s;
+    }
+  </style>
+</head>
+<body>
+  <div id="sun"></div>
+  <div class="cloud cloud1"></div>
+  <div class="cloud cloud2"></div>
+  <div class="cloud cloud3"></div>
+
+  <script>
+    // Optionally, you can add JavaScript here for further customization or interaction.
+  </script>
+</body>
+</html>
